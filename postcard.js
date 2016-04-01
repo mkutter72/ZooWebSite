@@ -42,6 +42,7 @@ $(document).ready(function () {
 
         if (!response || response.error) {
             alert('Error occured');
+            console.log(response.error);
         } else {
             alert('Post ID: ' + response.id);
         }
