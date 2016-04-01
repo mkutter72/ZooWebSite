@@ -12,10 +12,12 @@ $(document).ready(function () {
         console.log('Logged in.');
       }
       else {
-        FB.login();
+          FB.login(function(){}, {scope: 'publish_actions'});
       }
     });
   });
+
+
 
   $('#facebookLogout').on('click',function (e){
     e.preventDefault();
