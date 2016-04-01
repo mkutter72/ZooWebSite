@@ -1,0 +1,34 @@
+body {
+  font-family: arial;
+  text-align: center;
+}
+
+
+.postcard {
+  height: 400px;
+  width: 700px;
+  border: white 10px solid ;
+  /* clockwise or TRBL */
+  margin: 50px 0px 0px 10px; /* outside border */
+  padding: 20px 10px 20px 10px; /* inside border */
+}
+
+
+.dzLogo {
+  height: 80px;
+  width: 140px;
+  border: black 5px solid ;
+  /* clockwise or TRBL */
+  margin: 50px 0px 0px 10px; /* outside border */
+  padding: 20px 10px 20px 10px; /* inside border */
+}
+
+button {
+  height: 40px;
+  width: 120px;
+  border-radius: 10px;
+   background-color: white;
+  font-size: 16px;
+}
+
+

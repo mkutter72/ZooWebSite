@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+</head>
+
+<body>
+	<script>
+	  window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : 1105905996137106,  /*'1105769736150732', */
+	      xfbml      : true,
+	      version    : 'v2.5'
+	    });
+
+// FB.ui(
+//  {
+//   method: 'share',
+//   href: 'http://www.yogadiversityinitiative.org/'
+// }, function(response){});
+ 	FB.login();
+
+
+	  };
+
+
+
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "FBsdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+
+
+
+
+	</script>
+
+	<h1>Detroit Zoo Postcard Website</h1>
+	<img class="postcard" src="postcard.png">
+
+	<div>
+	<button type="button" id="facebookUpload">Facebook</button>
+	<button type="button" id="twitterUpload">Twitter</button>
+	<button type="button" id="instagramUpload">Instagram</button>
+  </div>
+	<img class="dzLogo" src="DZLogo.png">
+  <div>
+
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
+
+   <script src="postcard.js"></script>
+</body>
