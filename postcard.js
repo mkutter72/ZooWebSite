@@ -2,22 +2,31 @@
 
 $(document).ready(function () {
 
-  $('#facebookUpload').on('click',function (e){
+  $('#facebookLogin').on('click',function (e){
     e.preventDefault();
-    console.log("got here");
+    console.log("Logging in");
 
 
-FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    console.log('Logged in.');
-  }
-  else {
-    FB.login();
-  }
-});
-
-
-
+    FB.getLoginStatus(function(response) {
+      if (response.status === 'connected') {
+        console.log('Logged in.');
+      }
+      else {
+        FB.login();
+      }
+    });
   });
+
+  $('#facebookLogout').on('click',function (e){
+    e.preventDefault();
+    console.log("logout");
+
+
+    FB.logout(function(response) {
+      console.log("logged out");
+      });
+  });
+
+
 
 });
