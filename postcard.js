@@ -33,8 +33,23 @@ $(document).ready(function () {
  $('#facebookUpload').on('click',function (e){
     e.preventDefault();
 
+    var imgURL = "https://kutter-001.s3.amazonaws.com/2016-04-01/73b5589136dc9a9feef8960252255d25.png";
+
+    FB.api('/album_id/photos', 'post', {
+        message:'photo description',
+        url:imgURL
+    }, function(response){
+
+        if (!response || response.error) {
+            alert('Error occured');
+        } else {
+            alert('Post ID: ' + response.id);
+        }
+
+    });
+
    // Note: The call will only work if you accept the permission request
-    FB.api('/me/feed', 'post', {message: 'Happy Friday'});
+    //FB.api('/me/feed', 'post', {message: 'Happy Friday'});
   });
 
 
