@@ -34,7 +34,7 @@ $(document).ready(function () {
     e.preventDefault();
 
    // Note: The call will only work if you accept the permission request
-    FB.api('/me/feed', 'post', {message: 'Hello, world!'});
+    FB.api('/me/feed', 'post', {message: 'Happy Friday'});
   });
 
 
