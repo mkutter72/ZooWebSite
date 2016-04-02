@@ -30,7 +30,7 @@ $(document).ready(function () {
       FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
           console.log('Already Logged in.');
-        };
+        }
         else {
             FB.login(function(response){
               if (response.authResponse) {
