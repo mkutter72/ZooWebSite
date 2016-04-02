@@ -26,22 +26,23 @@ $(document).ready(function () {
 
     if (typeof FB === 'undefined') // Any scope
       alert("Could not connect to Facebook,  check blocking software");
+    else {
+      FB.getLoginStatus(function(response) {
+        if (response.status === 'connected') {
+          console.log('Already Logged in.');
+        };
+        else {
+            FB.login(function(response){
+              if (response.authResponse) {
+                console.log("successful login");
+              } else {
+                console.log('User cancelled login or did not fully authorize.');
+              }
 
-    FB.getLoginStatus(function(response) {
-      if (response.status === 'connected') {
-        console.log('Already Logged in.');
-      }
-      else {
-          FB.login(function(response){
-            if (response.authResponse) {
-              console.log("successful login");
-            } else {
-              console.log('User cancelled login or did not fully authorize.');
-            }
-
-          }, {scope: 'publish_actions'});
-      }
-    });
+            }, {scope: 'publish_actions'});
+        };
+      });
+    };
   });
 
 
