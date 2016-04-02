@@ -19,11 +19,13 @@ $(document).ready(function () {
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
-  if (typeof FB === 'undefined') // Any scope
-     alert("Could not connect to Facebook,  check blocking software");
+
 
   $('#facebookLogin').on('click',function (e){
     e.preventDefault();
+
+    if (typeof FB === 'undefined') // Any scope
+      alert("Could not connect to Facebook,  check blocking software");
 
     FB.getLoginStatus(function(response) {
       if (response.status === 'connected') {
