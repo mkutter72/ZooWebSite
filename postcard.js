@@ -72,7 +72,7 @@ $(document).ready(function () {
     }, function(response){
 
         if (!response || response.error) {
-            alert('Error occured');
+            alert(response.error);
         } else {
             alert('Post ID: ' + response.id);
         }
