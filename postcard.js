@@ -68,7 +68,7 @@ $(document).ready(function () {
         title: 'this is a title',
         description: 'this is a description',
         image:imgURL,
-        url: imgURl
+        url: imgURL
     }, function(response){
 
         if (!response || response.error) {
