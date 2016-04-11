@@ -88,7 +88,7 @@ $(document).ready(function () {
 
     FB.ui({
       method: 'feed',
-      // link: 'https://developers.facebook.com/docs/',
+      link: 'http://detroitzoo.org/',
       picture: imgURL,
       // caption: 'An example caption',
     }, function(response){
