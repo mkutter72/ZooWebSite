@@ -64,10 +64,8 @@ $(document).ready(function () {
     var imgURL = "https://kutter-001.s3.amazonaws.com/2016-04-01/73b5589136dc9a9feef8960252255d25.png";
 
     FB.api('/me/photos', 'post', {
-        message:'photo description',
-        title: 'this is a title',
-        description: 'this is a description',
-        image:imgURL,
+        message:'this is a message',
+        caption: 'this is a caption',
         url: imgURL
     }, function(response){
 
