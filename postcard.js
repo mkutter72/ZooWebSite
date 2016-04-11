@@ -86,9 +86,9 @@ $(document).ready(function () {
 
     FB.ui({
       method: 'feed',
-      link: 'https://developers.facebook.com/docs/',
+      // link: 'https://developers.facebook.com/docs/',
       picture: imgURL,
-      caption: 'An example caption',
+      // caption: 'An example caption',
     }, function(response){
         if (!response || response.error) {
             alert(response.error);
