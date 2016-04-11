@@ -81,5 +81,22 @@ $(document).ready(function () {
     //FB.api('/me/feed', 'post', {message: 'Happy Friday'});
   });
 
+  $('#twitterUpload').on('click',function (e){
+    e.preventDefault();
+    console.log("twitterUpload");
 
+    FB.ui({
+      method: 'feed',
+      link: 'https://developers.facebook.com/docs/',
+      caption: 'An example caption',
+    }, function(response){
+        if (!response || response.error) {
+            alert(response.error);
+        } else {
+            alert('Post ID: ' + response.post_id);
+        }
+
+    });
+
+  });
 });
