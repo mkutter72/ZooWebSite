@@ -67,7 +67,7 @@ $(document).ready(function () {
         message:'photo description',
         title: 'this is a title',
         description: 'this is a description',
-        url:imgURL
+        image:imgURL
     }, function(response){
 
         if (!response || response.error) {
