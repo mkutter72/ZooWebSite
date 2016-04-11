@@ -57,11 +57,10 @@ $(document).ready(function () {
       });
   });
 
+  var imgURL = "https://kutter-001.s3.amazonaws.com/2016-04-01/73b5589136dc9a9feef8960252255d25.png";
 
  $('#facebookUpload').on('click',function (e){
     e.preventDefault();
-
-    var imgURL = "https://kutter-001.s3.amazonaws.com/2016-04-01/73b5589136dc9a9feef8960252255d25.png";
 
     FB.api('/me/photos', 'post', {
         // message:'this is a message',
@@ -88,6 +87,7 @@ $(document).ready(function () {
     FB.ui({
       method: 'feed',
       link: 'https://developers.facebook.com/docs/',
+      picture: imgURL,
       caption: 'An example caption',
     }, function(response){
         if (!response || response.error) {
