@@ -90,7 +90,7 @@ $(document).ready(function () {
       method: 'feed',
       link: 'http://detroitzoo.org/',
       picture: imgURL,
-      // caption: 'An example caption',
+      caption: 'An example caption',
     }, function(response){
         if (!response || response.error) {
             alert(response.error);
