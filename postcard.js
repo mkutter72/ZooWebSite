@@ -65,6 +65,8 @@ $(document).ready(function () {
 
     FB.api('/me/photos', 'post', {
         message:'photo description',
+        title: 'this is a title',
+        description: 'this is a description',
         url:imgURL
     }, function(response){
 
