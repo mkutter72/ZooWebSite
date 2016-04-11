@@ -59,6 +59,8 @@ $(document).ready(function () {
 
   var imgURL = "https://kutter-001.s3.amazonaws.com/2016-04-01/73b5589136dc9a9feef8960252255d25.png";
 
+  imgURL = "https://kutter-001.s3.amazonaws.com/2016-04-11/ced211621f32382d33096dde5f0644ac.png";
+
  $('#facebookUpload').on('click',function (e){
     e.preventDefault();
 
