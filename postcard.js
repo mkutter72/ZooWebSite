@@ -88,9 +88,9 @@ $(document).ready(function () {
 
     FB.ui({
       method: 'feed',
-      link: 'http://detroitzoo.org/',
+     // link: 'http://detroitzoo.org/',
       picture: imgURL,
-      caption: 'An example caption',
+      caption: 'Here is my postcard from my Detroit Zoo Visit!'
     }, function(response){
         if (!response || response.error) {
             alert(response.error);
