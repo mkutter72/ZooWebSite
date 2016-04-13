@@ -99,6 +99,30 @@ $(document).ready(function () {
         }
 
     });
+  });
+
+
+  $('#twitter1').on('click',function (e){
+    e.preventDefault();
+    console.log("twitter1");
+
+   //api.requestToken(generalCallback);
+   tryMe3();
 
   });
+
+
+  $('#twitter2').on('click',function (e){
+    e.preventDefault();
+    console.log("twitter2");
+
+  });
+
+  $('#twitter3').on('click',function (e){
+    e.preventDefault();
+    console.log("twitter3");
+
+  });
+
+
 });
