@@ -20,6 +20,18 @@ $(document).ready(function () {
    }(document, 'script', 'facebook-jssdk'));
 
 
+  // Find out base in the info from the URL whether to put up photo or
+  // Run authentication for Twitter
+  if (location.search.indexOf ("postcardID") > 0){
+    console.log("postcard URL");
+    console.log(location.search.replace("?postcardID=",""));
+  }
+  if (location.search.indexOf ("oauth_token") > 0){
+    console.log("Twitter authentication");
+    var tokens = location.search.split('&');
+    console.log(tokens[0].replace("?oauth_token=",""));
+    console.log(tokens[1].replace("oauth_verifier=",""));
+  }
 
   $('#facebookLogin').on('click',function (e){
     e.preventDefault();

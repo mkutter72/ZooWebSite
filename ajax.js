@@ -38,7 +38,7 @@ $.ajax({
  curl --request 'POST' 'https://api.twitter.com/oauth/request_token' --header 'Authorization: OAuth oauth_consumer_key="tltlScWg67AwRz8qfQys0jB24", oauth_nonce="f6c1475228397298f11eb8067bf9bda9", oauth_signature="7%2FyjwGZgnaHDFkw738GbehkiWUU%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1460559891", oauth_token="612247911-q39MekIKoHQUdLv16Dhb8rpY655ewFOMhDBzgaZa", oauth_version="1.0"'
 
 
-
+xhr.setRequestHeader('Authorization','OAuth oauth_consumer_key="HdFdA3C3pzTBzbHvPMPw", oauth_nonce="4148fa6e3dca3c3d22a8315dfb4ea5bb", oauth_signature="uDZP2scUz6FUKwFie4FtCtJfdNE%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp= "1359955650", oauth_token, "1127121421-aPHZHQ5BCUoqfHER2UYhQYUEm0zPEMr9xJYizXl", oauth_version="1.0"');
 
 */
 function tryMe() {
@@ -97,15 +97,31 @@ function tryMe3() {
         url: 'https://api.twitter.com/oauth/request_token',
         type: 'POST',
         beforeSend: function (xhr) {
-            xhr.setRequestHeader('Authorization', 'OAuth oauth_consumer_key="VshAvsn9hM70llcNkBd0AEtoG", oauth_nonce="babde0df02243087691ff953b5dccfec", oauth_signature="3iPaxYFbhODAdTXEj3dhoJBQCfw%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1433665312", oauth_token="348340406-gqIe02ZD5aPSfvauvpgcRlwYfcHVF0OovvbCv2hB", oauth_version="1.0", oauth_callback="http://www.google.com"');
+            xhr.setRequestHeader('Authorization', 'OAuth oauth_consumer_key="tltlScWg67AwRz8qfQys0jB24", oauth_nonce="f6c1475228397298f11eb8067bf9bda9", oauth_signature="7%2FyjwGZgnaHDFkw738GbehkiWUU%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1460559891", oauth_token="612247911-q39MekIKoHQUdLv16Dhb8rpY655ewFOMhDBzgaZa", oauth_version="1.0"');
         },
-        dataType: 'jsonp',
+        dataType: 'json',
         success: function (data) {
             alert(data);
         }
     });
 };
 
+function tryMe4() {
+  $.ajax({
+      url: 'https://api.twitter.com/oauth/request_token',
+      method: 'POST',
+      headers: jsonData,
+      //     // 'Authorization':'OAuth oauth_consumer_key="tltlScWg67AwRz8qfQys0jB24", oauth_nonce="f6c1475228397298f11eb8067bf9bda9", oauth_signature="7%2FyjwGZgnaHDFkw738GbehkiWUU%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1460559891", oauth_token="612247911-q39MekIKoHQUdLv16Dhb8rpY655ewFOMhDBzgaZa", oauth_version="1.0"',
+      //     // 'Content-Type':'application/json'
+      //},
+
+      dataType: 'jsonp',
+   //   data: YourData,
+      success: function(data){
+        console.log('succes: '+data);
+      }
+    });
+};
 
 function generalCallback(error, data) {
     if (error) {
