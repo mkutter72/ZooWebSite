@@ -131,20 +131,11 @@ $(document).ready(function () {
         //     }
         //   });
 
-        var url = '/1.1/statuses/update_with_media.json';
-        var params = {status: 'This is a test agin',
-                      media: "./postcard.png"};
-        twitter.post(url, {
-            data: params,
-            cache:false,
-            processData: false,
-            contentType: false
-        }).done(function(data) {
-           //todo with data
-           console.log(data);
-         }).fail(function(err) {
-           console.log("error: " + err);
-         });
+       twitter.post('/1.1/media/upload.json', {
+          data: {
+            media: './postcard.png'
+            }
+          });
 
 
     }).fail(function(err) {
