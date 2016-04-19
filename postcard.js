@@ -132,14 +132,20 @@ $(document).ready(function () {
         //   });
 
         var url = '/1.1/statuses/update_with_media.json';
-        var params = {status: 'This is a test',
+        var params = {status: 'This is a test agin',
                       media: "./postcard.png"};
-        twitter.post(url, params).done(function(data) {
-          //todo with data
-          console.log(data);
-        }).fail(function(err) {
-          console.log("error: " + err);
-        });
+        twitter.post(url, {
+            data: params,
+            cache:false,
+            processData: false,
+            contentType: false
+        }).done(function(data) {
+           //todo with data
+           console.log(data);
+         }).fail(function(err) {
+           console.log("error: " + err);
+         });
+
 
     }).fail(function(err) {
       //todo when the OAuth flow failed
