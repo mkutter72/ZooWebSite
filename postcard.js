@@ -131,7 +131,7 @@ $(document).ready(function () {
         //     }
         //   });
 
-        var url = '/1.1/media/upload.json';
+        var url = 'https://upload.twitter.com/1.1/media/upload.json';
         var params = {media: "./postcard.png"};
         twitter.post(url, params).done(function(data) {
           //todo with data
