@@ -127,6 +127,17 @@ $(document).ready(function () {
   $('#twitter2').on('click',function (e){
     e.preventDefault();
     console.log("twitter2");
+    OAuth.initialize('-wTpkEkqzYX2b5EcW8-2pYzKuC0');
+
+    OAuth.popup('twitter', {cache: true}).done(function(twitter) {
+      //make API calls with `twitter`
+      console.log("passed");
+        console.log(twitter);
+    }).fail(function(err) {
+      //todo when the OAuth flow failed
+      console.log("failed:   "+ err);
+    });
+
 
   });
 
