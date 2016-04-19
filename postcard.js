@@ -133,7 +133,7 @@ $(document).ready(function () {
   $('#twitter3').on('click',function (e){
     e.preventDefault();
     console.log("twitter3");
-
+    window.location.href = "http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkutter-001.s3.amazonaws.com%2F2016-04-11%2Fced211621f32382d33096dde5f0644ac.png"
   });
 
 
