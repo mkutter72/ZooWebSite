@@ -132,9 +132,8 @@ $(document).ready(function () {
         //   });
 
         // media/upload.json 404 not found
-       twitter.post('/1.1/statuses/update.json', {
+       twitter.post('/1.1/statuses/upload.json', {
           data: {
-            status: "hello world again sss",
             media: './postcard.png'
             }
           });
