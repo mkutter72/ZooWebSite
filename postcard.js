@@ -123,6 +123,11 @@ $(document).ready(function () {
       //make API calls with `twitter`
       console.log("passed");
         console.log(twitter);
+        twitter.post('/1.1/statuses/update.json', {
+          data: {
+            status: "hello world!"
+            }
+          });
     }).fail(function(err) {
       //todo when the OAuth flow failed
       console.log("failed:   "+ err);
