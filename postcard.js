@@ -125,7 +125,8 @@ $(document).ready(function () {
         console.log(twitter);
         twitter.post('/1.1/statuses/update.json', {
           data: {
-            status: "hello world!"
+            status: "hello world again!",
+            media_ids: '722484921776914432'
             }
           });
     }).fail(function(err) {
