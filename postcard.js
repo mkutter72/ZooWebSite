@@ -131,8 +131,10 @@ $(document).ready(function () {
         //     }
         //   });
 
-       twitter.post('/1.1/media/upload.json', {
+        // media/upload.json 404 not found
+       twitter.post('/1.1/media/update_with_media.json', {
           data: {
+            status: "hello world again ss!",
             media: './postcard.png'
             }
           });
