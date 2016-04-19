@@ -132,7 +132,7 @@ $(document).ready(function () {
         //   });
 
         // media/upload.json 404 not found
-       twitter.post('/1.1/statuses/upload.json', {
+       twitter.post('/1.1/statuses/update_with_media.json', {
           data: {
             media: './postcard.png'
             }
