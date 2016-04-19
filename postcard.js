@@ -119,7 +119,7 @@ $(document).ready(function () {
 
     OAuth.initialize('-wTpkEkqzYX2b5EcW8-2pYzKuC0');
 
-    OAuth.popup('twitter', {cache: true}).done(function(twitter) {
+    OAuth.popup('twitter').done(function(twitter) {
       //make API calls with `twitter`
       console.log("passed");
         console.log(twitter);
