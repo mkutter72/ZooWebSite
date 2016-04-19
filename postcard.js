@@ -115,18 +115,8 @@ $(document).ready(function () {
 
 
   $('#twitter1').on('click',function (e){
-    e.preventDefault();
-    console.log("twitter1");
+     e.preventDefault();
 
-   //api.requestToken(generalCallback);
-   tryMe3();
-
-  });
-
-
-  $('#twitter2').on('click',function (e){
-    e.preventDefault();
-    console.log("twitter2");
     OAuth.initialize('-wTpkEkqzYX2b5EcW8-2pYzKuC0');
 
     OAuth.popup('twitter', {cache: true}).done(function(twitter) {
@@ -136,6 +126,16 @@ $(document).ready(function () {
     }).fail(function(err) {
       //todo when the OAuth flow failed
       console.log("failed:   "+ err);
+    });
+  });
+
+
+  $('#twitter2').on('click',function (e){
+    e.preventDefault();
+    oauthResult.post('/1.1/statuses/update.json', {
+      data: {
+        status: "hello world!"
+      }
     });
 
 
