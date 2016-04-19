@@ -132,7 +132,8 @@ $(document).ready(function () {
         //   });
 
         var url = '/1.1/statuses/update_with_media.json';
-        var params = {media: "./postcard.png"};
+        var params = {status: 'This is a test',
+                      media: "./postcard.png"};
         twitter.post(url, params).done(function(data) {
           //todo with data
           console.log(data);
