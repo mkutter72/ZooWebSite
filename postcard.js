@@ -123,12 +123,23 @@ $(document).ready(function () {
       //make API calls with `twitter`
       console.log("passed");
         console.log(twitter);
-        twitter.post('/1.1/statuses/update.json', {
-          data: {
-            status: "hello world again!",
-            media_ids: '722484921776914432'
-            }
-          });
+
+        // twitter.post('/1.1/statuses/update.json', {
+        //   data: {
+        //     status: "hello world again!",
+        //     media_ids: '722484921776914432'
+        //     }
+        //   });
+
+        var url = '/1.1/media/upload.json';
+        var params = {media: "./postcard.png"};
+        twitter.post(url, params).done(function(data) {
+          //todo with data
+          console.log(data);
+        }).fail(function(err) {
+          console.log("error: " + err);
+        });
+
     }).fail(function(err) {
       //todo when the OAuth flow failed
       console.log("failed:   "+ err);
