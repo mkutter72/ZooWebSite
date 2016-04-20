@@ -270,7 +270,8 @@ $(document).ready(function () {
 
             });
 
-    img.src = 'http://cache.boston.com/universal/site_graphics/blogs/bigpicture/obama_11_05/obama10_16803301.jpg';
+    img.src = imgURL;
+    //'http://www.queness.com/resources/images/png/apple_raw.png';
   });
 
 
