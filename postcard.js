@@ -180,7 +180,7 @@ $(document).ready(function () {
 
         twitter.post('/1.1/statuses/update.json', {
           data: {
-            status: "hello world again!",
+            status: "hello world again now",
             media_ids: '722484921776914432'
             }
           });
