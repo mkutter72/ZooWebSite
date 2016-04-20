@@ -175,12 +175,12 @@ $(document).ready(function () {
 
     OAuth.popup('twitter').done(function(twitter) {
       //make API calls with `twitter`
-        twitter.post('/1.1/statuses/update.json', {
-          data: {
-            status: "hello world again new",
-            media_ids: '722889343329832960'
-            }
-          });
+        // twitter.post('/1.1/statuses/update.json', {
+        //   data: {
+        //     status: "hello world again new",
+        //     media_ids: '722889343329832960'
+        //     }
+        //   });
 
        // twitter.post('/1.1/media/upload.json', {
        //    data: {
@@ -191,19 +191,19 @@ $(document).ready(function () {
 
 
 
-       // twitter.post('https://upload.twitter.com/1.1/media/upload.json', {
-       //    data: {
-       //       media: logo
-       //       }
-       //     }).done(function(data) {
-       //        //todo with data
-       //        var str = JSON.stringify(data, null, 2);
-       //        console.log("Success\n" + str);
-       //      }).fail(function(err) {
-       //      //todo with err
-       //        var errorTxt = JSON.stringify(e, null, 2)
-       //        console.log("Error\n" + errorTxt);
-       //    });
+       twitter.post('https://upload.twitter.com/1.1/media/upload.json', {
+          data: {
+             media: imageData
+             }
+           }).done(function(data) {
+              //todo with data
+              var str = JSON.stringify(data, null, 2);
+              console.log("Success\n" + str);
+            }).fail(function(err) {
+            //todo with err
+              var errorTxt = JSON.stringify(e, null, 2)
+              console.log("Error\n" + errorTxt);
+          });
 
     }).fail(function(err) {
       //todo when the OAuth flow failed
@@ -247,7 +247,7 @@ $(document).ready(function () {
     console.log("getimage");
     //var img = document.getElementById("theImage");
     var img = new Image();
-    img.setAttribute('crossOrigin', 'anonymous');
+   // img.setAttribute('crossOrigin', 'anonymous');
 
     img.addEventListener("load", function () {
 
