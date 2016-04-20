@@ -38,7 +38,8 @@ function  runit() {
         data.append('status', 'This is a test 3');
         //data.append('media[]', b64toBlob(logo), 'logo.png');
         data.append('media', 'postcard.png');
-        return result.post('/1.1/statuses/update_with_media.json', {
+ //       return result.post('/1.1/statuses/update_with_media.json', {
+        return result.post('/1.1/media/upload.json', {
             data: data,
             cache:false,
             processData: false,
