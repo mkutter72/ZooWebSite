@@ -187,11 +187,7 @@ $(document).ready(function () {
        //     });
 
 
-       oauthResult.post(url, params).done(function(data) {
-  //todo with data
-}).fail(function(err) {
-  //todo with err
-});
+
 
        twitter.post('https://upload.twitter.com/1.1/media/upload.json', {
           data: {
