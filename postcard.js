@@ -270,7 +270,7 @@ $(document).ready(function () {
               console.log(imageData);
             });
 
-    img.src = "./pcard.png';
+    img.src = './pcard.png';
     //'http://www.queness.com/resources/images/png/apple_raw.png';
   });
 
