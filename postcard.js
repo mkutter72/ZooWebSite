@@ -239,4 +239,16 @@ $(document).ready(function () {
   });
 
 
+
+
+  $('#getImage').on('click',function (e){
+    e.preventDefault();
+    console.log("getimage");
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("theImage");
+    ctx.drawImage(img, 10, 10);
+    console.log(c.toDataURL());
+  });
+
 });
