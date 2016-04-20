@@ -186,11 +186,26 @@ $(document).ready(function () {
        //       }
        //     });
 
+
+       oauthResult.post(url, params).done(function(data) {
+  //todo with data
+}).fail(function(err) {
+  //todo with err
+});
+
        twitter.post('https://upload.twitter.com/1.1/media/upload.json', {
           data: {
              media_data: logo
              }
-           });
+           }).done(function(data) {
+              //todo with data
+              var str = JSON.stringify(data, null, 2);
+              console.log("Success\n" + str);
+            }).fail(function(err) {
+            //todo with err
+              var errorTxt = JSON.stringify(e, null, 2)
+              console.log("Error\n" + errorTxt);
+          });
 
     }).fail(function(err) {
       //todo when the OAuth flow failed
