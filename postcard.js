@@ -184,12 +184,11 @@ $(document).ready(function () {
           });
 
         // media/upload.json 404 not found
-       // twitter.post('/1.1/statuses/update_with_media.json', {
-       //    data: {
-       //      status: "test test",
-       //      media: './postcard.png'
-       //      }
-       //    });
+       twitter.post('/1.1/media/upload.json', {
+          data: {
+             media: './postcard.png'
+             }
+           });
 
 
     }).fail(function(err) {
