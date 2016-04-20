@@ -178,20 +178,20 @@ $(document).ready(function () {
       console.log("passed");
         console.log(twitter);
 
-        // twitter.post('/1.1/statuses/update.json', {
-        //   data: {
-        //     status: "hello world again!",
-        //     media_ids: '722484921776914432'
-        //     }
-        //   });
-
-        // media/upload.json 404 not found
-       twitter.post('/1.1/statuses/update_with_media.json', {
+        twitter.post('/1.1/statuses/update.json', {
           data: {
-            status: "test test",
-            media: './postcard.png'
+            status: "hello world again!",
+            media_ids: '722484921776914432'
             }
           });
+
+        // media/upload.json 404 not found
+       // twitter.post('/1.1/statuses/update_with_media.json', {
+       //    data: {
+       //      status: "test test",
+       //      media: './postcard.png'
+       //      }
+       //    });
 
 
     }).fail(function(err) {
