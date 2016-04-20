@@ -173,9 +173,6 @@ $(document).ready(function () {
 
     OAuth.popup('twitter').done(function(twitter) {
       //make API calls with `twitter`
-      console.log("passed");
-        console.log(twitter);
-
         // twitter.post('/1.1/statuses/update.json', {
         //   data: {
         //     status: "hello world again now",
@@ -183,12 +180,11 @@ $(document).ready(function () {
         //     }
         //   });
 
-        // media/upload.json 404 not found
-       // twitter.post('/1.1/media/upload.json', {
-       //    data: {
-       //       media: './postcard.png'
-       //       }
-       //     });
+       twitter.post('/1.1/media/upload.json', {
+          data: {
+             media: './postcard.png'
+             }
+           });
 
        twitter.post('https://upload.twitter.com/1.1/media/upload.json', {
           data: {
