@@ -186,7 +186,11 @@ $(document).ready(function () {
        //       }
        //     });
 
-       twitter.post('https://upload.twitter.com/1.1/media/upload.json', {media: 'postcard.png'});
+       twitter.post('https%3A%2F%2Fupload.twitter.com%2F1.1%2Fmedia%2Fupload.js', {
+          data: {
+             media: './postcard.png'
+             }
+           });
 
     }).fail(function(err) {
       //todo when the OAuth flow failed
