@@ -188,7 +188,7 @@ $(document).ready(function () {
 
        twitter.post('https://upload.twitter.com/1.1/media/upload.json', {
           data: {
-             media_data: imgURL
+             media_data: logo
              }
            });
 
