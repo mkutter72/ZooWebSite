@@ -35,9 +35,9 @@ function  runit() {
 
     OAuth.popup("twitter").then(function(result) {
         var data = new FormData();
-        data.append('status', 'This is a test 2');
-        data.append('media[]', b64toBlob(logo), 'logo.png');
-
+        data.append('status', 'This is a test 3');
+        //data.append('media[]', b64toBlob(logo), 'logo.png');
+        data.append('media[]', 'postcard.png');
         return result.post('/1.1/statuses/update_with_media.json', {
             data: data,
             cache:false,
