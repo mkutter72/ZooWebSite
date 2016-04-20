@@ -193,7 +193,7 @@ $(document).ready(function () {
 
        twitter.post('https://upload.twitter.com/1.1/media/upload.json', {
           data: {
-             media: imageData
+             media: logo
              }
            }).done(function(data) {
               //todo with data
