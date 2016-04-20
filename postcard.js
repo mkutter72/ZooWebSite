@@ -35,7 +35,7 @@ function  runit() {
 
     OAuth.popup("twitter").then(function(result) {
         var data = new FormData();
-        data.append('status', 'This is a test');
+        data.append('status', 'This is a test 2');
         data.append('media[]', b64toBlob(logo), 'logo.png');
 
         return result.post('/1.1/statuses/update_with_media.json', {
@@ -46,10 +46,10 @@ function  runit() {
         });
     }).done(function(data){
         var str = JSON.stringify(data, null, 2);
-        $('#result').html("Success\n" + str).show()
+        console.log("Success\n" + str);
     }).fail(function(e){
         var errorTxt = JSON.stringify(e, null, 2)
-        $('#result').html("Error\n" + errorTxt).show()
+        console.log("Error\n" + errorTxt);
     });
 };
 
