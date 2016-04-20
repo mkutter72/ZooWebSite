@@ -176,20 +176,25 @@ $(document).ready(function () {
       console.log("passed");
         console.log(twitter);
 
-        twitter.post('/1.1/statuses/update.json', {
-          data: {
-            status: "hello world again now",
-            media_ids: '722484921776914432'
-            }
-          });
+        // twitter.post('/1.1/statuses/update.json', {
+        //   data: {
+        //     status: "hello world again now",
+        //     media_ids: '722484921776914432'
+        //     }
+        //   });
 
         // media/upload.json 404 not found
-       twitter.post('/1.1/media/upload.json', {
+       // twitter.post('/1.1/media/upload.json', {
+       //    data: {
+       //       media: './postcard.png'
+       //       }
+       //     });
+
+       twitter.post('https://upload.twitter.com/1.1/media/upload.json', {
           data: {
              media: './postcard.png'
              }
            });
-
 
     }).fail(function(err) {
       //todo when the OAuth flow failed
