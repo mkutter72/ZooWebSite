@@ -270,7 +270,7 @@ $(document).ready(function () {
 
             });
 
-    img.src = imgURL;
+    img.src = 'http://www.google.com/intl/en_ALL/images/logo.gif';
   });
 
 
