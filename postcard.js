@@ -247,7 +247,7 @@ $(document).ready(function () {
     console.log("getimage");
     //var img = document.getElementById("theImage");
     var img = new Image();
-    //img.setAttribute('crossOrigin', 'anonymous');
+    img.setAttribute('crossOrigin', 'anonymous');
 
     img.addEventListener("load", function () {
 
@@ -270,7 +270,7 @@ $(document).ready(function () {
 
             });
 
-    img.src = 'http://www.google.com/intl/en_ALL/images/logo.gif';
+    img.src = 'http://cache.boston.com/universal/site_graphics/blogs/bigpicture/obama_11_05/obama10_16803301.jpg';
   });
 
 
