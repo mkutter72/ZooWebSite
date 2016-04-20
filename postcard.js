@@ -267,10 +267,10 @@ $(document).ready(function () {
 
             imageData = dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
               console.log("image loaded");
-
+              console.log(imageData);
             });
 
-    img.src = imgURL;
+    img.src = "./pcard.png';
     //'http://www.queness.com/resources/images/png/apple_raw.png';
   });
 
